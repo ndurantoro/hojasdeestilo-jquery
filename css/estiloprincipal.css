@@ -10,6 +10,7 @@ and open the template in the editor.
 a.submenu{
     /*margin: 0 0 0 20px;*/
     padding: 0 0 0 30px;
+    display: none;
 }
 
 #contenedor{
