@@ -1,6 +1,6 @@
 <?php
-include ("constantes.php");
 include ("vacaciones.php");
+include ("constantes.php");
 echo "<pre>";
 var_dump($_POST);
 echo "</pre>";
@@ -10,13 +10,13 @@ $oVacacion=new Vacaciones($_POST["rut"],
                           "",
                           "",
                           "");
- if (isset($_SESSION["aVacaciones"])){
+if (isset($_SESSION["aVacaciones"])){
      $arrVacaciones=$_SESSION["aVacaciones"]; 
  } 
  
  $arrVacaciones[]=$oVacacion;
  $_SESSION["aVacaciones"]=$arrVacaciones;
  
- echo "<pre>";
+echo "<pre>";
 var_dump( $_SESSION["aVacaciones"]);
 echo "</pre>";

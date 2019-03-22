@@ -29,6 +29,18 @@ and open the template in the editor.
                             <br>Comentario<textarea id="comentario" name="comentario" rows="7" cols=20>   </textarea>
                             <input type="submit" value="Enviar"  >                     
                         </form>
+                        
+                        tradicional
+                        <form action="../lib/eliminavacaciones.php" method="post">
+                            Rut: <input id="rut_e" name="rut_e" type="text">
+                            <input type="submit" value="Eliminar"  >                     
+                        </form>
+                        
+                        asincronico
+                        <form>
+                            Rut: <input id="rut_easinc" name="rut_easinc" type="text">
+                            <input id="eliminar" type="button" value="Eliminar"  >                     
+                        </form>
                     </div>
         </div>
         
@@ -41,5 +53,10 @@ and open the template in the editor.
         $("#subvacaciones").show();
         $("#subvacaciones").css("display","block");
         $("#subvacaciones").addClass("active");
+        
+        $("#eliminar").click(function(){
+           $.post( "../lib/eliminarvacaciones.php", {rut_e:$("#ut_easinc").val()})
+
+        });
     </script>
 </html>
