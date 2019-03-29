@@ -15,6 +15,7 @@ and open the template in the editor.
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     </head>
     <body>
+        
         <div id="contenedor">
             <div id="titulo"></div>
             <div id="menu"><?php include('menu.php');?></div>
@@ -23,21 +24,25 @@ and open the template in the editor.
         
         <pre>
             <?php
-                var_dump(session_id());
-                $_SESSION["hm"]="Hola Mundo";
+            var_dump(session_id());
+            $_SESSION["hm"]="Hola Mundo";
             ?>
+
         </pre>
     </body>
     
     <script>
-        $("#menusolicitudes").click(function(){
-            if($("#subvacaciones").css("display")!=="none"){
-                $("#subvacaciones").css("display","none");
+        $("#menusolucitudes").click(function(){
+            
+            if ($("[id*=subvacaciones]").css("display")!="none"){
+                $("[id*=subvacaciones]").css("display","none");
             }
-            else {
-               $("#subvacaciones").show();
-               $("#subvacaciones").css("display","block");
+            else{
+                $("[id*=subvacaciones]").show();
+                $("[id*=subvacaciones]").css("display","block");
             }
-        });   
+         });
     </script>
+    
+    
 </html>
